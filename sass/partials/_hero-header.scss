@@ -37,6 +37,8 @@
 
     fill: $first-color;
 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover, &:focus {
         fill: $third-color;
     }
@@ -62,12 +64,8 @@
 
     cursor: pointer;
 
-    &::after {
-        content: " ";
-        width: 12px;
-        height: 12px;
-        background-image: url(../image/arrow.svg);
-    }
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 
     &:hover {
         background-color: $button-background-color;
@@ -80,12 +78,20 @@
     }
 }
 
-.button-modal-mobile:focus::after {
-    background-image: url(../image/arrow-white.svg);
+.button-modal__icon {
+    fill: $second-color;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .button-modal-mobile:focus & {
+        fill: $first-color;
+    }
 }
 
 .button-modal__text {
     margin-right: 7px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-text {
@@ -147,6 +153,8 @@
 
     color: $first-color;
 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover, &:focus {
         color: $second-color;
     }
@@ -187,6 +195,8 @@
 
     cursor: pointer;
 
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover, &:focus {
         border: 2px solid $button-background-color;
     }
@@ -198,6 +208,8 @@
     line-height: 1.25;
 
     color: $second-color;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     .product__button1:focus & {
         color: $first-color;
@@ -224,6 +236,8 @@
     text-decoration-line: underline;
     color: $third-color;
 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     .product__button2:hover & {
         color: $button-background-color;
     }
@@ -237,6 +251,7 @@
     position: absolute;
     top: 46%;
     left: 18%;
+    pointer-events: none;
 }
 
 // @media screen and (min-width: 768px) {
