@@ -9,52 +9,58 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@700&family=Seymour+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a class="logo" href="#">
-                <img srcset="./image/logo-x1.png 1x, ./image/logo-x2.png 2x, ./image/logo-x3.png 3x," src="./image/logo-x1.png" alt="logo-image" width="40.5">
-            </a>
-            <button type="button">
-                <svg width="32" height="32">
-                    <use class="icon-menu" ></use>
-                    <use class="icon-cross"></use>
-                </svg>
-            </button>
-            <div class="mobile-menu">
+        <div class="container header__container">
+            <div class="menu-logo-box">
+                <a class="logo link" href="#">
+                    <img srcset="./image/logo-x1.png 1x, ./image/logo-x2.png 2x, ./image/logo-x3.png 3x," src="./image/logo-x1.png" alt="logo-image" width="40.5">
+                </a>
+                <button class="menu-button" type="button" data-menu-button>
+                    <svg width="32" height="32">
+                        <use class="icon-menu" href="./image/icons.svg#menu"></use>
+                        <use class="icon-cross" href="./image/icons.svg#cross"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu" data-menu>
                 <nav>
-                    <ul>
-                        <li>Home</li>
-                        <li>How it's made</li>
-                        <li>Our products</li>
-                        <li>Contact</li>
+                    <ul class="list">
+                        <li><a class="link" href="">Home</a></li>
+                        <li><a class="link" href="">How it's made</a></li>
+                        <li><a class="link" href="">Our products</a></li>
+                        <li><a class="link" href="">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-            <button type="button">Buy now
-                <svg>
-                    <use></use>
-                </svg>
+            <button class="button-modal" type="button"><span class="button-modal__text">Buy now</span>
+                <!-- <svg width="12" height="12">
+                    <use class="button-modal__icon" href="./image/icons.svg#arrow-button"></use>
+                </svg> -->
             </button>
             <h1>Ice cream made with passion</h1>
-            <ul>
+            <ul class="sale-area list">
                 <li><span>16</span><span>cafes</span></li>
                 <li><span>23</span><span>food trucks</span></li>
             </ul>
-            <ul>
-                <li>Products</li>
-                <li>How it's made</li>
+            <ul class="list">
+                <li><button type="button">Products</button></li>
+                <li><button type="button">How it's made</button></li>
             </ul>
             <img src="" alt="icecream">
-            <img src="" alt="plate">
-            <a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quae.
-                <svg>
-                    <use href=""></use>
+            <a class="plate link" href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quae.
+                <svg width="40" height="14.5">
+                    <use class="plate__icon" href="./image/icons.svg#arrow-default"></use>
                 </svg>
+                <img class="plate__image" src="" alt="plate">
             </a>
         </div>
     </header>
-    
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

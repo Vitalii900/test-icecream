@@ -1,1 +1,137 @@
-/*# sourceMappingURL=main.css.map */
+body {
+  font-family: "montserrat", sans-serif;
+  color: #131313;
+}
+
+.container {
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__container {
+  background-color: #84A178;
+}
+
+.menu-logo-box {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  fill: #FCFCFC;
+}
+.menu-button:hover {
+  fill: #F8D24E;
+}
+
+.mobile-menu.is-open + .button-modal {
+  display: flex;
+}
+
+.button-modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 152px;
+  height: 42px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #000000;
+  background-color: #F8D24E;
+  border-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.button-modal::after {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  background-image: url(../image/arrow.svg);
+}
+.button-modal:hover {
+  background-color: #0A8817;
+  border: 1px solid #000000;
+}
+.button-modal:focus {
+  background-color: #0A8817;
+  color: #FCFCFC;
+}
+
+.button-modal:focus::after {
+  background-image: url(../image/arrow-white.svg);
+}
+
+.button-modal__text {
+  margin-right: 7px;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.is-open {
+  display: block;
+}
+
+.sale-area {
+  display: none;
+}
+
+.plate {
+  display: none;
+}/*# sourceMappingURL=main.css.map */

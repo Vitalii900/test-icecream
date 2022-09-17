@@ -1,0 +1,118 @@
+.header__container {
+    background-color: $background-color;
+    ;
+}
+
+// .logo {
+//     display: inline-block;
+//     margin-top: 12px;
+// }
+
+.menu-logo-box {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border-color: transparent;
+
+    cursor: pointer;
+
+    fill: $first-color;
+
+    &:hover {
+        fill: $third-color;
+    }
+}
+
+.mobile-menu.is-open + .button-modal {
+    display: flex;
+}
+
+.button-modal {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+    width: 152px;
+    height: 42px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+
+    color: $fourth-color;
+
+    background-color: #F8D24E;
+    border-color: transparent;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    &::after {
+        content: " ";
+        width: 12px;
+        height: 12px;
+        background-image: url(../image/arrow.svg);
+    }
+
+    &:hover {
+        background-color: $button-background-color;
+        border: 1px solid $fourth-color;
+    }
+
+    &:focus {
+        background-color: $button-background-color;
+        color: #FCFCFC;
+    }
+}
+
+.button-modal:focus::after {
+    background-image: url(../image/arrow-white.svg);
+}
+
+.button-modal__text {
+    margin-right: 7px;
+}
+
+.menu-button.is-open .icon-menu {
+    display: none;
+}
+
+.menu-button.is-open .icon-cross {
+    display: block;
+}
+
+.menu-button .icon-cross {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.is-open {
+    display: block;
+}
+
+.sale-area {
+    display: none;
+}
+
+.plate {
+    display: none;
+}
+
+// @media screen and (min-width: 768px) {
+//     .sale-area {
+//         display: block;
+//     }
+// }
